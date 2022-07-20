@@ -22,6 +22,9 @@ builder.Services.AddControllers();
 builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterType<ProductManager>().As<IProductService>());
 builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterType<EfProductDal>().As<IProductDal>());
 
+builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterType<CategoryManager>().As<ICategoryService>());
+builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterType<EfCategoryDal>().As<ICategoryDal>());
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

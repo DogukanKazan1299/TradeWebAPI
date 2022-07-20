@@ -12,9 +12,10 @@ namespace TradeWebAPI.DataAccess.Concrete.EntityFramework.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString: @"Server= ; Database=Northwind; trusted_connection=true");
+            optionsBuilder.UseSqlServer(connectionString: @"Server=DESKTOP-J2VMIPA; Database=Northwind; trusted_connection=true");
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
